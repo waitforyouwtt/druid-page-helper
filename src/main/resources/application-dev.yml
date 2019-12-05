@@ -1,0 +1,33 @@
+#指定 mysql jdbc 的数据库连接配置[&serverTimezone=GMT%2B8  解决：springboot 连接MySQL的时候报错The server time zone value 'ÖÐ¹ú±ê×¼Ê±¼ä' is unrec]
+spring:
+#指定页面模板的路径及编码
+  thymeleaf:
+    prefix: classpath:/templates/
+    suffix: .html
+    mode: HTML5
+    encoding: UTF-8
+    cache: false
+
+
+#数据库配置
+
+
+
+
+#指定mybatis 的mapper 关联的xml 的路径
+
+#指定mybatis plus 的mapper 关联的xml 的路径
+#mybatis-plus:
+  #mapper-locations: classpath*:mapper/*Mapper.xml
+  #type-aliases-package: com.yidiandian.entity
+
+#spring boot mybatis 打印sql及参数：level 下面是dao 层的包路径哦
+logging:
+  level:
+   com:
+    yidiandian:
+      dao: debug
+
+#指定服务的端口号
+server:
+  port: 8080

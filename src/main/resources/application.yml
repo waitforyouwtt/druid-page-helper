@@ -1,0 +1,6 @@
+#指定运行当前环境的文件路径
+spring:
+  profiles:
+    active: dev
+
+
