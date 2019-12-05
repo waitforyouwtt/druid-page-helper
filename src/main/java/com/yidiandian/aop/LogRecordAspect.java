@@ -23,8 +23,9 @@ import java.util.Map;
  * @Date: 2019/12/5 15:30
  * @Email: 15290810931@163.com
  */
+//定义一个切面
 @Aspect
-@Configuration//定义一个切面
+@Configuration
 public class LogRecordAspect {
 
     private static final Logger logger = LoggerFactory.getLogger(LogRecordAspect.class);
