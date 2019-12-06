@@ -90,6 +90,6 @@ public class LogRecordAspect {
                 e.printStackTrace();
             }
         }
-        return map;
+        return mapsssss;
     }
 }
