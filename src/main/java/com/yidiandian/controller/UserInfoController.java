@@ -7,9 +7,8 @@ import com.yidiandian.view.RequestUserInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
-
-import java.util.List;
 
 /**
  * @Author: 凤凰[小哥哥]
@@ -29,8 +28,8 @@ public class UserInfoController {
     }
 
     @PostMapping("/findAll")
-    public String findAll(RequestUserInfo userInfo){
+    public PageInfo<UserInfo> findAll(@RequestBody RequestUserInfo userInfo){
         PageInfo<UserInfo> list = userInfoService.findList(userInfo);
-        return "ok";
+        return list;
     }
 }

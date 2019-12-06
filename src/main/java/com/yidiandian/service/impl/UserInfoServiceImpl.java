@@ -38,7 +38,7 @@ public class UserInfoServiceImpl implements UserInfoService {
         try {
             Page<?> page = PageHelper.startPage(requestUserInfo.getPageNum(),requestUserInfo.getPageSize());
             //log.info("设置第一页两条数据,请求参数pageNum：{},pageSize:{}",requestUserInfo.getPageNum(),requestUserInfo.getPageSize());
-            List<UserInfo> list = userInfoDao.findList();
+            List<UserInfo> list = userInfoDao.findList(requestUserInfo);
             pageInfo = new PageInfo<>(list);
             //log.info("总共有:{}",page.getTotal()+"条数据,实际返回{}:",list.size()+"两条数据!");
         } catch (Exception e) {

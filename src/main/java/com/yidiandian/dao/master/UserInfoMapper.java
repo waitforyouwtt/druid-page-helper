@@ -1,6 +1,7 @@
 package com.yidiandian.dao.master;
 
 import com.yidiandian.entity.UserInfo;
+import com.yidiandian.view.RequestUserInfo;
 import org.apache.ibatis.annotations.Mapper;
 import java.util.List;
 
@@ -12,5 +13,5 @@ import java.util.List;
 @Mapper
 public interface UserInfoMapper {
 
-    List<UserInfo> findList();
+    List<UserInfo> findList(RequestUserInfo requestUserInfo);
 }
