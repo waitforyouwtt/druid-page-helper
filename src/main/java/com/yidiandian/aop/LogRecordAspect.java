@@ -77,12 +77,13 @@ public class LogRecordAspect {
         Field[] fs = userCla.getDeclaredFields();
         for (int i = 0; i < fs.length; i++) {
             Field f = fs[i];
-            f.setAccessible(true); // 设置些属性是可以访问的
+            // 设置些属性是可以访问的
+            f.setAccessible(true);
             Object val = new Object();
             try {
                 val = f.get(obj);
-                // 得到此属性的值
-                map.put(f.getName(), val);// 设置键值
+                // 得到此属性的值  // 设置键值
+                map.put(f.getName(), val);
             } catch (IllegalArgumentException e) {
                 e.printStackTrace();
             } catch (IllegalAccessException e) {
