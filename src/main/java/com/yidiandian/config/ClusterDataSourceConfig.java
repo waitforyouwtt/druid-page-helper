@@ -10,7 +10,6 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
 import org.springframework.jdbc.datasource.DataSourceTransactionManager;
-
 import javax.sql.DataSource;
 
 /**
@@ -37,8 +36,6 @@ public class ClusterDataSourceConfig {
     @Value("${cluster.datasource.driverClassName}")
     private String driverClass;
 
-    // 和MasterDataSourceConfig一样，这里略
-
     @Bean(name = "clusterDataSource")
     public DataSource clusterDataSource() {
         DruidDataSource dataSource = new DruidDataSource();
@@ -46,8 +43,6 @@ public class ClusterDataSourceConfig {
         dataSource.setUsername(username);
         dataSource.setPassword(password);
         dataSource.setDriverClassName(driverClass);
-
-        // 和MasterDataSourceConfig一样，这里略 ...
         return dataSource;
     }
 

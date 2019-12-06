@@ -4,8 +4,6 @@ import com.github.pagehelper.PageInfo;
 import com.yidiandian.entity.UserInfo;
 import com.yidiandian.view.RequestUserInfo;
 
-import java.util.List;
-
 /**
  * @Author: 凤凰[小哥哥]
  * @Date: 2019/12/5 14:13

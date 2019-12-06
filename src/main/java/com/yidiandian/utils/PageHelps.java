@@ -1,7 +1,6 @@
 package com.yidiandian.utils;
 
 import lombok.Data;
-
 import java.io.Serializable;
 
 /**
